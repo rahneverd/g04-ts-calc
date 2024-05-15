@@ -25,20 +25,38 @@ let answers = await inquirer.prompt([
 
 // operation 
 let result: number
-if (answers.operator === '+') {
-  // Addition
-  result = answers.firstNumber + answers.secondNumber
-} else if (answers.operator === '-') {
-  // Subtraction
-  result = answers.firstNumber - answers.secondNumber
-}else if (answers.operator === '*') {
-  // Multiplication
-  result = answers.firstNumber * answers.secondNumber
-}else {
-  // Division
-  result = answers.firstNumber / answers.secondNumber
-}
+// if (answers.operator === '+') {
+//   // Addition
+//   result = answers.firstNumber + answers.secondNumber
+// } else if (answers.operator === '-') {
+//   // Subtraction
+//   result = answers.firstNumber - answers.secondNumber
+// }else if (answers.operator === '*') {
+//   // Multiplication
+//   result = answers.firstNumber * answers.secondNumber
+// }else {
+//   // Division
+//   result = answers.firstNumber / answers.secondNumber
+// }
 //  console.log("Result is ", result)
+
+switch (answers.operator) {
+  case '+':
+    result = answers.firstNumber + answers.secondNumber
+    break
+  case '-':
+    result = answers.firstNumber - answers.secondNumber
+    break
+  case '*':
+    result = answers.firstNumber * answers.secondNumber
+    break
+  case '/':
+    result = answers.firstNumber / answers.secondNumber
+    break
+  default:
+    result = answers.firstNumber + answers.secondNumber
+    break
+}
 
  console.log(`Result is ${result}`)
 
