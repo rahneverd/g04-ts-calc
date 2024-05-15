@@ -2,6 +2,8 @@
 
 import inquirer from 'inquirer'
 
+console.log('Welcome')
+
 let answers = await inquirer.prompt([
   {
     name: 'firstNumber',
